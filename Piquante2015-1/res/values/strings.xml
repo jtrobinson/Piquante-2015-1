@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Anxiety</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_act_main_menu">ActMainMenu</string>
+
+    <color name="rearden">#0D5F58</color>
+
+    <!-- Main Menu -->
+    <string name="MainMenu">Main Menu</string>
+    <string name="StartGame">Start Game</string>
+    <string name="Options">Option</string>
+    <string name="title_activity_act_game_screen">ActGameScreen</string>
+    
+    <!-- Game Screen -->
+    <string name="GameScreenTitle">Game Screen (Not being used!!!)</string>
+
+</resources>
