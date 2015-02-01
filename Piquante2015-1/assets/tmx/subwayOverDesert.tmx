@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="../gfx/desert_tiled.png" width="281" height="211"/>
+  <tile id="30">
+   <properties>
+    <property name="cactus" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="subwayTilesetv2" tilewidth="64" tileheight="64" spacing="1" margin="1">
+  <image source="../gfx/subwayTilesetv2.png" width="261" height="196"/>
+ </tileset>
+ <layer name="Ground" width="40" height="40" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2Y3W7CMAxGA70AhjS2IcEGgjFgA8ZWeP+nmyvFarEi7PTHeKgXRxDJEYfPKbHoOOc6JVgKeQRGwFPEnqpI/dKA37shP+v5ZVlNgCnwatAPa7tAQryb8HoDZv4zZwLmwAB4AIYKuX0Aa++3FrBp0G/P+H0Dnzf04/Irrm/p92XQ70y8Qn7Z+f9V9qNnjq6552PrLs9lHX6h52BP8sP3nN8PybWu/HZkjT6x+TXdX+pJOfj+4e8Lx7EGv56n7/K76BqJsA5ZVPQbuXy+wO96jaH34+pC+8r4TV0+XzwDLwxj78fVhfY1efaKxMwvZVm58Jwj8dTwQ8eY3KqAs5mUuZJX6l+5u5rePxslP0Tilzmdfa2m38mgHz3X1vzK9Lc4X2j5nSL8aJbW8gv12rKfZn44m0k5KvvdCysDDv8FmpXGf4Ntj1ta9PgDtg3Z5gAZAAA=
+  </data>
+ </layer>
+ <layer name="Subway" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC82X3U4CMRCFq6KCooKigr+LoqLi3wUX3vloPpqP5mmyJKWZnindpdkmX5psd7tnpmeYxZi0sQE2wRZogW2wA3ZBn8Cea4MuOACH4Ah8le9bde6APbAv7DkiaPoG4BScgfNVEuYNm4tjcCLsOSZo+q7ANbgBtxF5Cs02FxfgUtjzOUJH6PoEPIBH8LRKwrxhc3EH7oU9pxX0zcAbeAcfEXkKzTZHL+BV2PPTcH/2iD7/LFKHlh/mz2HgGavbP4t11K99D/NnEdBndftnkTq0/Gj+lPRJuufG/LI8+fO8nFl+7Nlr/pT0Wd3+WaQOlp9Ooj573T+L70CeQvPifvb+fqI+6SxSB6vfUYS+tqBPOgv46U/KE/Hfj51Z/Y4j9PVKTS7SvamD1a+mbVjScwj1lHX1X6avKBmaZa3SWaQOVr+avmlJYZa11pk/pkHTt2BqlrXWmb+Y/hurc6FV8nKu/hujtc7fv6r9111n966jfguj58tdZ/eGfKT5q+r3s7vOvBJa0/xV9fvZXWdeCa1p/qr6/eyuM6+E1jR/Vf1+dtdZrCEfaf6qs35ZrCEfaf6qs35ZrKn/U+usXxar5qMc9cti1XyUo35ZrJqPctTvFYlH81GO+p2QeDQf5ajfGYmnCf23ReJpQv/tknia0H8HJJ4m9N+U+s3Zf1PqN2f/ZfX7D0EHiaQAGQAA
+  </data>
+ </layer>
+</map>

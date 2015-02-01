@@ -35,7 +35,7 @@ public class ActMainMenu extends Activity {
 	}
 	
 	public void startGame(View view) {
-		Intent launchGame = new Intent(this, zesty.squid.anxiety.ActGameScreen.class);
+		Intent launchGame = new Intent(this, zesty.squid.anxiety.GameScreenV2.class);
         startActivity(launchGame);
 	}
 	

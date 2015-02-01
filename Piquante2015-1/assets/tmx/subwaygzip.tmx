@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="7" height="11" tilewidth="60" tileheight="60" backgroundcolor="#1c8080" nextobjectid="1">
+ <tileset firstgid="1" name="subwayTilesetv260" tilewidth="60" tileheight="60" spacing="1" margin="1">
+  <image source="gfx/subwayTilesetv260.png" width="245" height="245"/>
+ </tileset>
+ <layer name="Subway" width="7" height="11">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NmYGBgxoEZoZgdjQZhJihGloOJwfQjy8HE2HCYyYpFDJnmwiHHSYFbiPEfNgwAC3TYmjQBAAA=
+  </data>
+ </layer>
+</map>

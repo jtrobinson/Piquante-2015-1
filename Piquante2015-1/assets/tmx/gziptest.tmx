@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="deserttiled" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="gfx/deserttiled.png" width="281" height="211"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC53TvRLCIBBGUWL8gcqk0lRqo8REzfs/nR8z7Awy7LKxuIUjOQJZnTHGoQZtUI9GNCT1MZetbdEW7dAeHQqfbfRuSSWXM0u/QeaY2am71pvQjF6My3ncPdjEe6NP5nKedLfBvKMH8mhBx2j+69HegtWhEzoLz9G7ahR2cC7oKqzVzpWNDp2dW6udKzLp7Ny6fK40ZiusyedKa3LfzeZ3rnKz5pY8mtmSqdlr7T+QmtrzU1PFXHOnHeMtlfckuZznhfck7ZXzyPQFU9rrs2JS0p2m7hfc72nvQAYAAA==
+  </data>
+ </layer>
+</map>

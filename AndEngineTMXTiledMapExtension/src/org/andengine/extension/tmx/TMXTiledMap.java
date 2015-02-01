@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.andengine.extension.tmx.util.constants.TMXConstants;
 import org.andengine.opengl.texture.region.ITextureRegion;
 import org.andengine.util.SAXUtils;
+import org.andengine.util.debug.Debug;
 import org.xml.sax.Attributes;
 
 import android.util.SparseArray;
@@ -141,43 +142,58 @@ public class TMXTiledMap implements TMXConstants {
 	// ===========================================================
 
 	public TMXProperties<TMXTileProperty> getTMXTileProperties(final int pGlobalTileID) {
-		final SparseArray<TMXProperties<TMXTileProperty>> globalTileIDToTMXTilePropertiesCache = this.mGlobalTileIDToTMXTilePropertiesCache;
-
-		final TMXProperties<TMXTileProperty> cachedTMXTileProperties = globalTileIDToTMXTilePropertiesCache.get(pGlobalTileID);
-		if(cachedTMXTileProperties != null) {
-			return cachedTMXTileProperties;
-		} else {
-			final ArrayList<TMXTileSet> tmxTileSets = this.mTMXTileSets;
-
-			for(int i = tmxTileSets.size() - 1; i >= 0; i--) {
-				final TMXTileSet tmxTileSet = tmxTileSets.get(i);
-				if(pGlobalTileID >= tmxTileSet.getFirstGlobalTileID()) {
-					return tmxTileSet.getTMXTilePropertiesFromGlobalTileID(pGlobalTileID);
+		if (pGlobalTileID < 1){
+			// -2147483642
+			Debug.e("ANDENGINE DEBUG: Entering getTMXTileProperties with tileID " + pGlobalTileID);
+			return getTMXTileProperties(1);
+		}
+		else {
+			final SparseArray<TMXProperties<TMXTileProperty>> globalTileIDToTMXTilePropertiesCache = this.mGlobalTileIDToTMXTilePropertiesCache;
+	
+			final TMXProperties<TMXTileProperty> cachedTMXTileProperties = globalTileIDToTMXTilePropertiesCache.get(pGlobalTileID);
+			if(cachedTMXTileProperties != null) {
+				return cachedTMXTileProperties;
+			} else {
+				final ArrayList<TMXTileSet> tmxTileSets = this.mTMXTileSets;
+	
+				for(int i = tmxTileSets.size() - 1; i >= 0; i--) {
+					final TMXTileSet tmxTileSet = tmxTileSets.get(i);
+					if(pGlobalTileID >= tmxTileSet.getFirstGlobalTileID()) {
+						return tmxTileSet.getTMXTilePropertiesFromGlobalTileID(pGlobalTileID);
+					}
 				}
+				throw new IllegalArgumentException("No TMXTileProperties found for pGlobalTileID=" + pGlobalTileID);
 			}
-			throw new IllegalArgumentException("No TMXTileProperties found for pGlobalTileID=" + pGlobalTileID);
 		}
 	}
 
 	public ITextureRegion getTextureRegionFromGlobalTileID(final int pGlobalTileID) {
-		final SparseArray<ITextureRegion> globalTileIDToTextureRegionCache = this.mGlobalTileIDToTextureRegionCache;
-
-		final ITextureRegion cachedTextureRegion = globalTileIDToTextureRegionCache.get(pGlobalTileID);
-		if(cachedTextureRegion != null) {
-			return cachedTextureRegion;
-		} else {
-			final ArrayList<TMXTileSet> tmxTileSets = this.mTMXTileSets;
-
-			for(int i = tmxTileSets.size() - 1; i >= 0; i--) {
-				final TMXTileSet tmxTileSet = tmxTileSets.get(i);
-				if(pGlobalTileID >= tmxTileSet.getFirstGlobalTileID()) {
-					final ITextureRegion textureRegion = tmxTileSet.getTextureRegionFromGlobalTileID(pGlobalTileID);
-					/* Add to cache for the all future pGlobalTileIDs with the same value. */
-					globalTileIDToTextureRegionCache.put(pGlobalTileID, textureRegion);
-					return textureRegion;
+		if (pGlobalTileID < 1){
+			// -2147483642
+			Debug.e("ANDENGINE DEBUG: Entering getTextureRegionFromGlobalTileID with tileID " + pGlobalTileID);
+			return getTextureRegionFromGlobalTileID(1);
+		}
+		else {
+			final SparseArray<ITextureRegion> globalTileIDToTextureRegionCache = this.mGlobalTileIDToTextureRegionCache;
+	
+			final ITextureRegion cachedTextureRegion = globalTileIDToTextureRegionCache.get(pGlobalTileID);
+			if(cachedTextureRegion != null) {
+				return cachedTextureRegion;
+			} else {
+				final ArrayList<TMXTileSet> tmxTileSets = this.mTMXTileSets;
+				Debug.e("ANDENGINE DEBUG: About to enter for-loop, tmxTileSets.size() is " + tmxTileSets.size());
+				for(int i = tmxTileSets.size() - 1; i >= 0; i--) {
+					//Debug.e("ANDENGINE DEBUG: In the for-loop, i is " + i);
+					final TMXTileSet tmxTileSet = tmxTileSets.get(i);
+					if(pGlobalTileID >= tmxTileSet.getFirstGlobalTileID()) {
+						final ITextureRegion textureRegion = tmxTileSet.getTextureRegionFromGlobalTileID(pGlobalTileID);
+						/* Add to cache for the all future pGlobalTileIDs with the same value. */
+						globalTileIDToTextureRegionCache.put(pGlobalTileID, textureRegion);
+						return textureRegion;
+					}
 				}
+				throw new IllegalArgumentException("No TextureRegion found for pGlobalTileID=" + pGlobalTileID);
 			}
-			throw new IllegalArgumentException("No TextureRegion found for pGlobalTileID=" + pGlobalTileID);
 		}
 	}
 
