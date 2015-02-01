@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" 
 	android:layout_height="fill_parent"
 	android:background="#0D5F58">
     
-    <Space
-		android:layout_width="10dp"
-		android:layout_height="wrap_content" />
-    
     <LinearLayout
+        android:id="@+id/upperBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bar with ads and buttons"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+    
+     
+    <LinearLayout
+        android:id="@+id/gameSceneContainer"
         android:orientation="vertical"
+        android:paddingTop="25dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_below="@+id/upperBar">
  
 		<org.andengine.opengl.view.RenderSurfaceView
 		    android:id="@+id/game_screen_sceneview"
@@ -22,5 +38,23 @@
 		    android:layout_gravity="center" />
 		
 	</LinearLayout>
+	 
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom bar"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+    
+</RelativeLayout>
