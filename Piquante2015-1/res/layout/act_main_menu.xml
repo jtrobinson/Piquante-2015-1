@@ -31,5 +31,14 @@
         android:layout_below="@+id/btnStartGame"
         android:text="@string/Options" 
         android:onClick="openOptions"/>
+    
+    <Button
+        android:id="@+id/btnXMLExample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnOptions"
+        android:layout_below="@+id/btnOptions"
+        android:text="XML Example" 
+        android:onClick="openXMLExample"/>
 
 </RelativeLayout>

@@ -32,13 +32,21 @@
             android:label="@string/title_activity_act_game_screen" >
         </activity>
         <activity
+            android:name=".GameScreenV2"
+            android:label="@string/title_activity_act_game_screen" >
+        </activity>
+        
+        <!-- AndEngine example activities -->
+        <activity
             android:name=".TiledMapExample"
             android:label="TiledMapExample" >
         </activity>
         <activity
-            android:name=".GameScreenV2"
-            android:label="@string/title_activity_act_game_screen" >
+            android:name=".XMLLayoutExample"
+            android:label="XMLLayoutExample" >
         </activity>
+        <!-- /AndEngine example activities -->
+        
     </application>
 
 </manifest>

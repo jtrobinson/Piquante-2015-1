@@ -43,4 +43,9 @@ public class ActMainMenu extends Activity {
 		Intent example = new Intent(this, zesty.squid.anxiety.TiledMapExample.class);
         startActivity(example);
 	}
+	
+	public void openXMLExample(View view) {
+		Intent example = new Intent(this, zesty.squid.anxiety.XMLLayoutExample.class);
+        startActivity(example);
+	}
 }
