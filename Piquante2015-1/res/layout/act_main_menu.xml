@@ -15,12 +15,21 @@
         android:text="@string/MainMenu" />
 
     <Button
-        android:id="@+id/btnStartGame"
+        android:id="@+id/btnStartGameLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:text="@string/StartGame" 
+        android:text="Game with Layout" 
+        android:onClick="startGameLayout"/>
+    
+    <Button
+        android:id="@+id/btnStartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnStartGameLayout"
+        android:layout_below="@+id/btnStartGameLayout"
+        android:text="Game without Layout" 
         android:onClick="startGame"/>
 
     <Button
@@ -29,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnStartGame"
         android:layout_below="@+id/btnStartGame"
-        android:text="@string/Options" 
+        android:text="Tiled Map Example" 
         android:onClick="openOptions"/>
     
     <Button

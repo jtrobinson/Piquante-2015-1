@@ -35,6 +35,10 @@
             android:name=".GameScreenV2"
             android:label="@string/title_activity_act_game_screen" >
         </activity>
+        <activity
+            android:name=".GameScreenPlusLayout"
+            android:label="@string/title_activity_act_game_screen" >
+        </activity>
         
         <!-- AndEngine example activities -->
         <activity

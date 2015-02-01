@@ -34,6 +34,11 @@ public class ActMainMenu extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	public void startGameLayout(View view) {
+		Intent launchGame = new Intent(this, zesty.squid.anxiety.GameScreenPlusLayout.class);
+        startActivity(launchGame);
+	}
+	
 	public void startGame(View view) {
 		Intent launchGame = new Intent(this, zesty.squid.anxiety.GameScreenV2.class);
         startActivity(launchGame);
