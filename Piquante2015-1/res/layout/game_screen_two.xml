@@ -5,18 +5,21 @@
 	android:layout_height="fill_parent"
 	android:background="#0D5F58">
     
+    <Space
+		android:layout_width="10dp"
+		android:layout_height="wrap_content" />
+    
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center">
-
-
-		<!-- Fill_Parent works, if the game is meant to be full-screen!--> 
+ 
 		<org.andengine.opengl.view.RenderSurfaceView
 		    android:id="@+id/game_screen_sceneview"
-		    android:layout_width="fill_parent"
-		    android:layout_height="fill_parent" />
+		    android:layout_width="300dp"
+		    android:layout_height="540dp"
+		    android:layout_gravity="center" />
 		
 	</LinearLayout>
 

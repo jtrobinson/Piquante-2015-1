@@ -32,6 +32,7 @@ public class GameScreenPlusLayout extends SimpleLayoutGameActivity implements IO
 
 	protected static int CAMERA_WIDTH = 420;
 	protected static int CAMERA_HEIGHT = 660;
+	protected static int DIFF = 0; //50
 	
 	private BitmapTextureAtlas mBitmapTextureAtlas;
 	//private TiledTextureRegion mPlayerTextureRegion;
@@ -57,8 +58,8 @@ public class GameScreenPlusLayout extends SimpleLayoutGameActivity implements IO
 		//mCamera = new BoundCamera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 		//return new EngineOptions(true, ScreenOrientation.PORTRAIT_FIXED, new RatioResolutionPolicy(CAMERA_WIDTH, CAMERA_HEIGHT), mCamera);
 		
-		camera = new Camera(0, 0, GameScreenPlusLayout.CAMERA_WIDTH, GameScreenPlusLayout.CAMERA_HEIGHT);
-		return new EngineOptions(true, ScreenOrientation.PORTRAIT_FIXED, new RatioResolutionPolicy(GameScreenPlusLayout.CAMERA_WIDTH, GameScreenPlusLayout.CAMERA_HEIGHT), camera);
+		camera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
+		return new EngineOptions(true, ScreenOrientation.PORTRAIT_FIXED, new RatioResolutionPolicy(CAMERA_WIDTH, CAMERA_HEIGHT), camera);
 	}
 
 	@Override
